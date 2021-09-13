@@ -6,7 +6,7 @@ const AESApi = axios.create({
 })
 
 AESApi.interceptors.request.use((req) => {
-  req.headers['Content-Type'] = 'application/json'
+  req.headers['Content-Type'] = 'text/plain'
   // Important: request interceptors **must** return the request.
   return req
 })

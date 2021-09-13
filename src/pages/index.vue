@@ -8,6 +8,7 @@
   import sleep from '/@src/utils/sleep'
   import { AESApi } from '../api/interceptor'
   import { ADDRESS } from '../constants/paths'
+  import { get } from 'lodash'
 
   const isLoading = ref(false)
   const address = ref('')
@@ -19,11 +20,14 @@
       notif.warning("Address must be start with 'aes'")
     } else {
       try {
-        // console.log(address.value)
         isLoading.value = true
         const data = { address: address.value, coins: ['100000000uaes'] }
         const response = await AESApi.post(ADDRESS, data)
-        notif.success('Congratulation, you just received 100 uaes')
+        if (get(response, 'data.transfers[0].status') === 'ok') {
+          notif.success('Congratulation, you just received 100 uaes')
+        } else {
+          notif.error('Something went wrong, please contact admin')
+        }
       } catch (error) {
         notif.error('Something went wrong, please contact admin')
       } finally {

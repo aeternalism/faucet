@@ -53,7 +53,7 @@
       </g>
     </g>
   </svg> -->
-  <img src="public/icons/favicon.ico" />
+  <img src="/icons/favicon.ico" />
 </template>
 
 <style lang="scss" scoped>
