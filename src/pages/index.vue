@@ -5,7 +5,6 @@
 
   import { isDark } from '/@src/state/darkModeState'
   import useNotyf from '/@src/composable/useNotyf'
-  import sleep from '/@src/utils/sleep'
   import { AESApi } from '../api/interceptor'
   import { ADDRESS } from '../constants/paths'
   import { get } from 'lodash'
