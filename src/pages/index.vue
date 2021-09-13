@@ -19,7 +19,7 @@
       notif.warning("Address must be start with 'aes'")
     } else {
       try {
-        console.log(address.value)
+        // console.log(address.value)
         isLoading.value = true
         const data = { address: address.value, coins: ['100000000uaes'] }
         const response = await AESApi.post(ADDRESS, data)
@@ -33,7 +33,7 @@
   }
 
   useHead({
-    title: 'AESChain Login',
+    title: 'Aeternalism Faucet',
   })
 </script>
 
@@ -68,8 +68,8 @@
       <div class="inner-wrap">
         <!--Form Title-->
         <div class="auth-head">
-          <h2>Welcome Back.</h2>
-          <p>Please sign in to your account</p>
+          <h2>Aeternalism Faucet</h2>
+          <p>Enter your address to receive testnet token</p>
         </div>
 
         <!--Form-->
@@ -97,7 +97,7 @@
                   fullwidth
                   raised
                 >
-                  Sign In
+                  Get token
                 </V-Button>
               </V-Control>
             </div>

@@ -23,7 +23,7 @@
 </script>
 
 <template>
-  <svg
+  <!-- <svg
     id="OBJECTS"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,8 @@
         />
       </g>
     </g>
-  </svg>
+  </svg> -->
+  <img src="public/icons/favicon.ico" />
 </template>
 
 <style lang="scss" scoped>
