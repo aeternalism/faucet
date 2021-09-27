@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import { ref, defineProps } from 'vue'
   import { useRouter } from 'vue-router'
+  import { isDark } from '/@src/state/darkModeState'
 
   defineProps({
     light: {
@@ -53,7 +54,7 @@
       </g>
     </g>
   </svg> -->
-  <img src="/icons/favicon.ico" />
+  <img :src="isDark ? '/icons/aes_white.svg' : '/icons/aes_dark.svg'" />
 </template>
 
 <style lang="scss" scoped>
